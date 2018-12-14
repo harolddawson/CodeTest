@@ -1,0 +1,111 @@
+﻿@page
+@model InstructionsModel
+@{
+    ViewData["Title"] = "Instructions";
+}
+<h2>@ViewData["Title"]</h2>
+
+<div>
+  <p>On the next page, <a asp-page="/Calculator">Calculator</a>, you will find the core of the code test. 
+  This is a rather poorly function calculator and your job will be to make it a little better. 
+  Below, you will find a few tickets and follow up questions regarding the calculator. 
+  Please take your time and document your progress through commits. Your process of thought is just as important as the code you write.</p>
+
+  <section id="instructions">
+    <h3>Submission Instructions:</h3>
+    <ul>
+      <li><b>The only files you should need to modify or evaluate for this code test are in the below list</b>:
+        <ul>
+          <li>
+            ./Pages/Calculator.cshtml
+          </li>
+          <li>
+            ./Pages/Calculator.cshtml.cs
+          </li>
+          <li>
+            ./Backend/Operations/* (any files in this folder)
+          </li>
+          <li>
+            ./Backend/Services/* (any files in this folder)
+          </li>
+        </ul>
+      </li>
+      <li>Your code history for this test is greatly requested. Please create a repository on github or bitbucket and commit frequently. 
+        <ul>
+          <li>Be sure to indicate in your commits which ticket or question the commit is related to.</li>
+          <li>You may use abbreviated tags such as <b>[T1]</b> to mean Ticket #1 and <b>[Q1]</b> to mean follow up question #1.</li>
+        </ul>
+      </li>
+      <li><b>Please complete at least 2 tickets and 2 follow up questions from the below list.</b></li>
+      <li>For each ticket you complete, please provide the following information in a text document or ReadMe alongside your submission.
+        <ul>
+          <li>From the ticket description, what do you see as the requirements for completing this ticket?</li>
+          <li>Do you feel the ticket was properly labeled (Feature/Bug)? Please provide your reasoning.</li>
+          <li>What other information would have made this ticket easier to complete?</li>
+        </ul>
+      </li>
+      <li>For each follow up question you complete, please provide your answer in a text document or ReadMe alongside your submission.
+        <ul><li>This may be the same document as the document for your ticket feedback.</li></ul>
+      </li>
+      <li>Within three days, email the link to the repository where your code is hosted to the email address listed on the <a asp-page="/Contact">Contact</a> page.
+        <ul><li>As a general rule, we allow three days from the date that you receive this to submit your code, but you may request more time if needed.</li></ul>
+      </li>
+    </ul>
+  </section>
+
+
+  <section id="tickets">
+    <h3>Tickets</h3>
+    <p>For the following tickets, you will be provided with a typical bug/support ticket format. The Title and Desctiption provide some information regarding the request and the actions to perform. Bugs are tickets describing something to be fixed and Features are tickets describing something to be added.</p>
+    <ol>
+      <li>
+        <ul>
+          <li><b>Type</b>: Bug</li>
+          <li><b>Title</b>: Unable to calculate remaining credits</li>
+          <li><b>Desctiption</b>: I'm trying to use the calculator to figure out how many credits I have left. I know I started with 17 and used about 6 one day, 3 another, and 5 last Thursday, but this keeps telling me I have over 30 left. What's going on?</li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li><b>Type</b>: Bug</li>
+          <li><b>Title</b>: CAN'T CLEAR RESULTS!</li>
+          <li><b>Desctiption</b>: I need to be able to clear my results if I make a mistake. Not being able to clear results on a calculator is unacceptable. This needs to be fixed ASAP!</li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li><b>Type</b>: Feature</li>
+          <li><b>Title</b>: Can you add a square root?</li>
+          <li><b>Desctiption</b>: I'd really like the ability to calculate a square root. Can you add that button for me?</li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li><b>Type</b>: Feature</li>
+          <li><b>Title</b>: Activity log?</li>
+          <li><b>Desctiption</b>: A lot of calculators provide a running log of the operations you've performed. It would be really helpful to have something like that here.</li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li><b>Type</b>: Bug</li>
+          <li><b>Title</b>: Twenty + Seven = 0</li>
+          <li><b>Desctiption</b>: Attempting to add 'Seven' to my result isn't working. Please fix. </li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+  <section id="followup">
+    <h3>Follow Up Questions</h3>      
+    <ol>
+      <li>Are there any bugs, other than the ones listed above, in the Calculator code? If so, what are they? If not, what steps did you test to be sure?</li>
+      <li>If you were asked to add support for grouping operations (parenthesis) to this Calculator, how would you go about that? Please break down what you believe it would take into tickets.</li>
+      <li>What are some ways the Calculator code could be refactored to be more extensible? What are some features that would be more easily added through a refactor?</li>
+      <li>How would you go about adding unit tests to the Calculator code? Is it testable as is? Are there any code changes necessary for proper unit testing?</li>
+      <li>What are some features you think would be useful to add to this calculator? Write out a few tickets describing these features and the necessary information to add them.</li>
+    </ol>
+  </section>
+  
+
+  <p>Remember, if you have any questions about the tickets or follow up questions, reach out to us via the email on the <a asp-page="/Contact">Contact</a> page.</p>
+</div>

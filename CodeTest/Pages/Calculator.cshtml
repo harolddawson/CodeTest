@@ -1,0 +1,37 @@
+﻿@page 
+@model CalculatorModel
+@{
+    ViewData["Title"] = "Calculator";
+}
+<h2>@ViewData["Title"]</h2>
+
+<div id="calculator-body">
+    @using (Html.BeginForm("ButtonPressed", "Calculator"))
+    {
+        <input id="val_left" name="left" readonly value="@Model.CalculationResult">
+        <span>
+            <input id="op_plus" data-operation="add" type="submit" value="  +  ">
+            <input id="op_min" data-operation="subtract" type="submit" value="  -  ">
+            <input id="op_mult" data-operation="multiply" type="submit" value="  *  ">
+            <input id="op_div" data-operation="divide" type="submit" value="  /  ">
+        </span>
+        <input id="val_right" name="right" value="@Model.Right">
+        <input id="operation" type="hidden" name="operation">
+    }
+</div>
+@section Scripts{
+   <script>
+    $(document).ready(function () {
+
+        function SetOperation() {
+            $("#operation").val($(this).data("operation"));
+        }
+
+        $("#op_plus").click(SetOperation);
+        $("#op_min").click(SetOperation);
+        $("#op_mult").click(SetOperation);
+        $("#op_div").click(SetOperation);
+
+    });
+</script>
+}

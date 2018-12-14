@@ -1,0 +1,64 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <!-- TODO: Get image for this slide -->
+            <img src="~/images/banner1.svg" alt="ASP.NET" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    Welcome to the DealerOn Developer Code Test!
+                </p>
+                <a class="btn btn-default" asp-page="/Instructions">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>Overview</h2>
+        <div>
+            The DealerOn Developer Code Test is designed to test your coding and reasoning abilities. You'll find <a asp-page="/Instructions">instructions</a> on the next page regarding what to do and how to submit your code test. For now, check out the tips below.             
+            <h3>Your code submission should:</h3>
+            <ul>
+                <li> include a brief explanation of your design and assumptions along with your code.</li>
+                <li> work! Your code needs to compile and run without us needing to download any third-party DLLs, plugins, or NuGet packages. 
+                    <ul>
+                        <li>We should be able to open the project in VS Code, press F5 and see this site.</li>
+                    </ul>
+                </li>
+                <li> be entirely yours. Your code must not use any external libraries (i.e. you must only use what is provided to you in the project, or in the System.* namespaces). Don’t include any code you didn’t personally write.</li>
+                <li> be object-oriented. Be sure to show a clear division of responsibilities between your classes, don’t do everything inside one method!</li>
+                <li> not be sloppy or cumbersome. Neatness and readability count!</li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <h2>Links</h2>
+        <ul>
+            <li><a href="https://www.dealeron.com">DealerOn</a></li>
+            <li><a href="https://www.dealeron.com/join-our-team">Team and Culture</a></li>
+            <li><a href="http://jobs.dealeron.com/">Current openings</a></li>
+        </ul>
+    </div>
+</div>
