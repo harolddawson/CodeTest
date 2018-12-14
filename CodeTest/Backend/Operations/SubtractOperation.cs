@@ -10,7 +10,7 @@ namespace CodeTest.Backend.Operations
 
     public override int Evaluate()
     {
-      return Left + Right;
+      return Left - Right;
     }
   }
 }
